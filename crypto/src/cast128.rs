@@ -29,11 +29,11 @@ impl Cast128 {
             return Err(anyhow!("key cannot be empty"));
         }
 
-        let mut small_x = [0u32; Self::CAST5_KEY_SIZE];
-        let mut small_z = [0u32; Self::CAST5_KEY_SIZE];
-        let mut cap_x = [0u32; 4];
-        let mut cap_z = [0u32; 4];
-        let mut cipher_key = [0u32; Self::CAST5_EXT_KEY_SIZE];
+        let mut small_x = vec![0u32; Self::CAST5_KEY_SIZE];
+        let mut small_z = vec![0u32; Self::CAST5_KEY_SIZE];
+        let mut cap_x = vec![0u32; 4];
+        let mut cap_z = vec![0u32; 4];
+        let mut cipher_key = vec![0u32; Self::CAST5_EXT_KEY_SIZE];
 
         if length > Self::CAST5_KEY_SIZE {
             length = Self::CAST5_KEY_SIZE;
