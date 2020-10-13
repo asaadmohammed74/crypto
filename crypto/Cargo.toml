@@ -1,0 +1,12 @@
+[package]
+name = "crypto"
+version = "0.1.0"
+authors = ["Asaad"]
+edition = "2018"
+
+[lib]
+name = "crypto"
+crate-type = ["cdylib"]
+
+[dependencies]
+anyhow = "*"
